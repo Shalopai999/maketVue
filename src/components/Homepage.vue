@@ -56,9 +56,35 @@
                         </div>
                         <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt=""></button></div>
                     </div>
-
                 </div>
             </div>
+
+        </div>
+    </div>
+    <div class="aside">
+        <div class="container">
+            <div class="asideFlex">
+                <div class="asideCard">
+                    <div class="asideValue">12</div>
+                    <div class="asideTitle">Years Of Experiance</div>
+                </div>
+                <div class="verticalLine"></div>
+                <div class="asideCard">
+                    <div class="asideValue">85</div>
+                    <div class="asideTitle">Success Project</div>
+                </div>
+                <div class="verticalLine"></div>
+                <div class="asideCard">
+                    <div class="asideValue">15</div>
+                    <div class="asideTitle">Active Project</div>
+                </div>
+                <div class="verticalLine"></div>
+                <div class="asideCard">
+                    <div class="asideValue">95</div>
+                    <div class="asideTitle">Happy CUstomers</div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -164,8 +190,6 @@
     margin-bottom: 96px;
 }
 
-.productCard {}
-
 .productCardTitle {
     font-family: DM Serif Display;
     font-size: 25px;
@@ -226,5 +250,53 @@
 
 .productCard__4 {
     padding: 0 0 50px 50px;
+}
+
+.aside {
+    height: 458px;
+    margin-bottom: 98px;
+    background-color: #F4F0EC;
+
+}
+
+.asideFlex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 150px 0 150px 0;
+}
+
+.asideCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.verticalLine {
+    border-left: 1px solid #CDA274;
+    height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.asideValue {
+    font-family: DM Serif Display;
+    font-size: 85px;
+    font-weight: 400;
+    line-height: 106px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #CDA274;
+}
+
+.asideTitle {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: #4D5053;
+    ;
 }
 </style>
