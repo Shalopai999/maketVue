@@ -18,10 +18,46 @@
                 </div>
             </div>
             <div class="homepage__productCards">
-                <div class="productCard productCard__1"><img src="@/assets/img/card1.jpg" alt=""></div>
-                <div class="productCard productCard__4"><img src="@/assets/img/card4.jpg" alt=""></div>
-                <div class="productCard productCard__3"><img src="@/assets/img/card3.jpg" alt=""></div>
-                <div class="productCard productCard__2"><img src="@/assets/img/card2.jpg" alt=""></div>
+                <div class="productCard productCard__1"><img src="@/assets/img/card1.jpg">
+                    <div class="productCardInfo">
+                        <div class="productCardContent">
+                            <h3 class="productCardTitle">Modern Kitchan</h3>
+                            <p class="productCardText">Decor / Artchitecture</p>
+                        </div>
+                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt=""></button></div>
+                    </div>
+
+                </div>
+                <div class="productCard productCard__4"><img src="@/assets/img/card4.jpg">
+                    <div class="productCardInfo">
+                        <div class="productCardContent">
+                            <h3 class="productCardTitle">Modern Kitchan</h3>
+                            <p class="productCardText">Decor / Artchitecture</p>
+                        </div>
+                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt=""></button></div>
+                    </div>
+
+                </div>
+                <div class="productCard productCard__3"><img src="@/assets/img/card3.jpg">
+                    <div class="productCardInfo">
+                        <div class="productCardContent">
+                            <h3 class="productCardTitle">Modern Kitchan</h3>
+                            <p class="productCardText">Decor / Artchitecture</p>
+                        </div>
+                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt=""></button></div>
+                    </div>
+
+                </div>
+                <div class="productCard productCard__2"><img src="@/assets/img/card2.jpg">
+                    <div class="productCardInfo">
+                        <div class="productCardContent">
+                            <h3 class="productCardTitle">Modern Kitchan</h3>
+                            <p class="productCardText">Decor / Artchitecture</p>
+                        </div>
+                        <div><button class="productCardBtn"><img src="@/assets/img/Vector.svg" alt=""></button></div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -125,15 +161,70 @@
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+    margin-bottom: 96px;
 }
 
 .productCard {}
 
-.productCard__1 {}
+.productCardTitle {
+    font-family: DM Serif Display;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.02em;
+    text-align: left;
+}
 
-.productCard__2 {}
+.productCardText {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
 
-.productCard__3 {}
+.productCardInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
 
-.productCard__4 {}
+.productCardContent {
+    margin-top: 20px;
+}
+
+.productCardBtn {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 35px;
+    border: none;
+    background-color: #F4F0EC;
+}
+
+.productCardBtn:hover {
+    background-color: #bababa;
+    /* color: #292F36; */
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.productCard__1 {
+    padding: 0 50px 50px 0;
+}
+
+.productCard__2 {
+    padding: 50px 0 0 50px;
+}
+
+.productCard__3 {
+    padding: 50px 50px 0 0;
+}
+
+.productCard__4 {
+    padding: 0 0 50px 50px;
+}
 </style>
