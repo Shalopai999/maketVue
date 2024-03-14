@@ -81,16 +81,41 @@
                 <div class="verticalLine"></div>
                 <div class="asideCard">
                     <div class="asideValue">95</div>
-                    <div class="asideTitle">Happy CUstomers</div>
+                    <div class="asideTitle">Happy Customers</div>
                 </div>
             </div>
 
         </div>
     </div>
+    <div class="articlesNews">
+        <div class="container">
+            <div class="articlesNews__content">
+                <div class="articlesNews__section">
+                    <h1 class="articlesNews__content__title">Articles & News</h1>
+                    <p class="articlesNews__content__text">It is a long established fact that a reader will be
+                        distracted by the of readable content of a page when lookings at its layouts the points of
+                        using.</p>
+                </div>
+                <div class="articlesNews__cards">
+                    <LittleCard />
+                    <LittleCard />
+                    <LittleCard />
+                </div>
+            </div>
+        </div>
+    </div>
 
 </template>
 
-<script setup lang="ts">
+<script>
+import LittleCard from './LittleCard.vue';
+
+export default {
+    name: 'Homepage',
+    components: {
+        LittleCard,
+    }
+}
 
 </script>
 
@@ -297,6 +322,48 @@
     letter-spacing: 0.01em;
     text-align: left;
     color: #4D5053;
-    ;
+}
+
+.articlesNews__content__title {
+    font-family: DM Serif Display;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 63px;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+
+.articlesNews__content__text {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+
+.articlesNews__section {
+    max-width: 812px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 52px;
+}
+
+.articlesNews__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.articlesNews {
+    margin-bottom: 96px;
+}
+
+.articlesNews__cards {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-between;
 }
 </style>
