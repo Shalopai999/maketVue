@@ -12,9 +12,9 @@
                 </div>
                 <div class="pages">
                     <p class="title__pages">Pages</p>
-                    <a class="page" href="#">Home</a>
-                    <a class="page" href="#">Project</a>
-                    <a class="page" href="#">Blog</a>
+                    <nav class="nav__page">
+                        <router-link class="page" v-for="link in links" :key="link.id" :to="link.url">{{ link.title }}</router-link>
+                    </nav>
                 </div>
                 <div class="contact">
                     <p class="title__pages">Contact</p>
@@ -27,8 +27,30 @@
     </div>
 </template>
 
-<script setup lang="ts">
-
+<script>
+export default {
+    data() {
+        return {
+            links: [
+                {
+                    id: 1,
+                    title: "Home",
+                    url: "/"
+                },
+                {
+                    id: 2,
+                    title: "Project",
+                    url: "/project"
+                },
+                {
+                    id: 3,
+                    title: "Blog",
+                    url: "/blog"
+                },
+            ]
+        }
+    },
+}
 </script>
 
 <style scoped>
@@ -70,18 +92,24 @@
     /* margin-left: 120px; */
 }
 
-.page {
-    font-family: "Jost", sans-serif;
-    font-size: 22px;
-    color: #292F36;
-    margin: 18px 0;
-}
-
 .title__pages {
     font-size: 25px;
 }
 
 .contact {
     width: 258px;
+}
+
+.nav__page {
+    display: flex;
+    flex-direction: column;
+}
+
+.page {
+    font-weight: 400;
+    font-family: "Jost", sans-serif;
+    font-size: 22px;
+    color: #292F36;
+    margin: 8px 0;
 }
 </style>

@@ -1,4 +1,5 @@
 <template>
+    <Header />
     <div class="homepage">
         <div class="container">
             <div class="section">
@@ -96,25 +97,27 @@
                         distracted by the of readable content of a page when lookings at its layouts the points of
                         using.</p>
                 </div>
-                <div class="articlesNews__cards">
-                    <LittleCard />
-                    <LittleCard />
-                    <LittleCard />
-                </div>
+            </div>
+            <div class="articlesNews__cards">
+                <LittleCard :quantity="3"></LittleCard>
             </div>
         </div>
     </div>
-
+    <Footer />
 </template>
 
 <script>
-import LittleCard from './LittleCard.vue';
+import LittleCard from '@/components/LittleCard.vue';
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
 
 export default {
     name: 'Homepage',
     components: {
         LittleCard,
-    }
+        Header,
+        Footer,
+    },
 }
 
 </script>
@@ -124,7 +127,6 @@ export default {
     background-image: url(@/assets/img/ImageHomepage1.jpg);
     background-repeat: no-repeat;
     background-position: center center;
-    /* background-attachment: fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -172,7 +174,6 @@ export default {
 
 .section__btn:hover {
     background-color: #808080;
-    /* color: #292F36; */
     transition: all 0.3s;
     cursor: pointer;
 }
@@ -256,7 +257,6 @@ export default {
 
 .productCardBtn:hover {
     background-color: #bababa;
-    /* color: #292F36; */
     transition: all 0.3s;
     cursor: pointer;
 }

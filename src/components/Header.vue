@@ -6,18 +6,39 @@
                     <div class="logo__left">
                         <a class="logo" href="#"><img src="@/assets/img/Logo1.svg" alt=""> Interno</a>
                     </div>
-                    <div>
-                        <a class="logo__right" href="">Home</a>
-                        <a class="logo__right" href="">Project</a>
-                        <a class="logo__right" href="">Blog</a>
-                    </div>
+                    <nav>
+                        <router-link class="logo__right" v-for="link in links" :key="link.id" :to="link.url">{{ link.title }}</router-link>
+                    </nav>
                 </div>
             </div>
         </div>
     </div>
 </template>
 
-<script setup lang="ts">
+<script>
+export default {
+    data() {
+        return {
+            links: [
+                {
+                    id: 1,
+                    title: "Home",
+                    url: "/"
+                },
+                {
+                    id: 2,
+                    title: "Project",
+                    url: "/project"
+                },
+                {
+                    id: 3,
+                    title: "Blog",
+                    url: "/blog"
+                },
+            ]
+        }
+    },
+}
 
 </script>
 
